@@ -22,3 +22,13 @@ if (localStorage.getItem("theme") == "light") {
 } else {
   localStorage.setItem("theme", "light");
 }
+let body = document.querySelector("body");
+
+body.addEventListener("click", (e) => {
+  e.stopPropagation();
+  document
+    .querySelector(".container")
+    .addEventListener("click", () =>
+      settingsmenu.classList.remove("settings-menu-height")
+    );
+});
